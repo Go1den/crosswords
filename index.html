@@ -3,14 +3,16 @@
         <h1>Golden Mini Crossword</h1>
         <h2>Free forever, unlike a certain <i>other</i> mini</h2>
         <h3>Select a puzzle</h3>
-        <div class="pm-embed-div" data-set="d65d8a3af614febac4fbd6c582c6286c56afd979fc8e42df8d0e9daa6850ae57" data-page="date-picker" data-height="700px"></div>
-        <!-- <div class="puzzles">
-            <ul>
-                <li><a href="1">#1 9/2/2025</a></li>
-            </ul>
-        </div>
-        <div class="return">
-            <h3><a href="https://go1den.com">Return to Main Page</a></h3>
-        </div> -->
+
+        <!-- Include the CryptoJS library for hashing the user id before sending it to the PuzzleMe server. -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+        <!-- Include the javascript library for embedding this puzzle. -->
+        <script id="pm-script" src="https://puzzleme.amuselabs.com/pmm/js/puzzleme-embed.js"></script>
+        <!-- Specify the Amuse Labs server name from where the puzzles will be served and trigger the embed flow. -->
+        <script>
+            PM_Config.PM_BasePath = "https://puzzleme.amuselabs.com/pmm/";
+        </script>
+        <!-- Following line embeds the picker on your page. -->
+        <div class="pm-embed-div" data-set="d65d8a3af614febac4fbd6c582c6286c56afd979fc8e42df8d0e9daa6850ae57" data-page="date-picker" data-height="100vh" data-mobileMargin="10px"></div>
     </body>
 </html>
